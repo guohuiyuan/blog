@@ -56,7 +56,7 @@ blog/
 - `templates/`：文章模板和系列模板。
 - `posts/`：正式发布的文章，按年份分目录。
 - `series/`：系列文章目录，每个系列一个子目录。
-- `notes/`：灵感、草稿、临时记录，不算正式发布。
+- `notes/`：灵感和临时记录，不算正式发布。
 - `assets/images/`：图片资源。
 - `assets/files/`：附件、示例文件、下载资源。
 
@@ -95,22 +95,21 @@ blog/
 ## 推荐写作流程
 
 ```text
-ideas -> drafts -> posts -> index/archive/tags -> series
+ideas -> posts/年份/ -> index/archive/tags -> series
 ```
 
 对应到这个仓库：
 
 1. 在 `notes/ideas.md` 记下想法
-2. 在 `notes/drafts/` 写草稿
-3. 发布到 `posts/年份/`
-4. 更新 `index.md`、`archive.md`、`tags.md`
-5. 如果是系列内容，再更新 `series/`
+2. 直接在 `posts/年份/` 写文章（未完成也留在这里，用 Git 记录进度）
+3. 写完后更新 `index.md`、`archive.md`、`tags.md`
+4. 如果是系列内容，再更新 `series/`
 
 ## 写作流程
 
-1. 先在 `notes/` 记录想法或草稿。
-2. 正式发布时，将文章放入 `posts/年份/`。
-3. 在 `index.md`、`archive.md`、`tags.md` 中补充链接。
+1. 先在 `notes/` 记录想法。
+2. 写作直接在 `posts/年份/` 进行，不单独维护草稿目录。
+3. 写完后在 `index.md`、`archive.md`、`tags.md` 中补充链接。
 4. 如果是系列文章，再同步更新 `series/` 下对应系列说明。
 
 ## 最新文章
@@ -129,9 +128,8 @@ ideas -> drafts -> posts -> index/archive/tags -> series
 如果你今天就想开始写，可以按这个顺序：
 
 1. 打开 `notes/ideas.md` 记下 3 个想写的主题
-2. 复制 `templates/post.md` 到 `notes/drafts/`
-3. 写完后，把文章移到 `posts/2026/`
-4. 按 `templates/publish-checklist.md` 补全索引和标签
+2. 复制 `templates/post.md` 到 `posts/2026/`，按正式命名规则起文件名
+3. 写完后按 `templates/publish-checklist.md` 补全索引和标签
 
 ## 后续建议
 
